@@ -1,0 +1,290 @@
+/* start styling */
+/* 
+   ** color : 
+   --- #3649a9
+
+   ** background color : 
+   --- #f7eada
+
+   ** font Family : 
+   --- font-family: 'Anton', sans-serif;
+   --- font-family: 'Aref Ruqaa', serif;
+   --- font-family: 'Markazi Text', serif;
+   --- font-family: 'Courier Prime', monospace;
+   --- font-family: 'Roboto', sans-serif;
+
+   */
+/* 
+         #################### global classes "#########################
+*/
+.container{
+    width: 90%;
+    margin: auto;
+}
+.place-float {
+ float:left;
+}
+/* 
+         #################### global classes "#########################
+*/
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #f7eada;
+    margin: 0;
+    padding:0;
+}
+                 /*-------------------------- start header ------------------ */
+header {
+    width: 100%;
+    height: 100vh;
+}
+/* start menu */
+header .menu {
+    width:100%;
+    padding: 16px 0;
+    height: 10vh;
+}
+header .menu #logo{
+    width:20%;
+    height: 100%;
+}
+header .menu #logo span {
+    display:block;
+    width:30px;
+    height:30px;
+    text-align:center;
+    line-height:30px;
+    border:2px solid #3649a9;
+    color: #3649a9;
+    position:relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight:600;
+    border-bottom-left-radius: 9px;
+    text-transform:uppercase;
+}
+header .menu #logo span::after{
+    position:absolute;
+    content:'';
+    width:15px;
+    height: 6px;
+    top: -3px;
+    right: -3px;
+    background:#f7eada;
+    
+}
+header .menu .nav-bar {
+    width:80%;
+}
+header .menu .nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: end;
+    height: 100%;
+}
+header .menu .nav-bar ul li a, select{
+    display: inline-block;
+    padding: 6px 16px;
+    color:#3649a9;
+    font-family: 'Roboto', sans-serif;
+    text-decoration:none;
+    font-size:15px;
+    text-transform: capitalize;
+    
+}
+header .menu .nav-bar ul li:not(.call-num) a:hover {
+    color: rgb(182, 53, 53);
+}
+header .menu .nav-bar ul li.call-num{
+    background:#3649a9;
+    border-radius:4px;
+    transition: background .5s cubic-bezier(0.16, 0.68, 1, 0.74);
+}
+header .menu .nav-bar ul li.call-num:hover {
+    background:#273892
+}
+header .menu .nav-bar ul li.call-num a{
+    color:#fff;
+    font-size:13px;
+}
+header .menu .nav-bar ul li select{
+  border:none;
+  background-color:#DDD;
+  outline:none;
+  border-radius:4px;
+
+}
+header .menu .nav-bar ul li select option {
+  background-color:#DDD;
+}
+
+header .menu .navicon {
+    position: absolute;
+    top: 10px;
+    right:10px;
+    display:none;
+    color:#3649a9;
+    font-size: 25px;
+    z-index:999;
+}
+/* start intro  */
+.intro{
+    padding: 48px 0 0 0;
+}
+.intro .nice-title{
+    width: 50%;
+    height: 60vh;
+
+     
+}
+.intro .nice-title h1{
+    font-size:120px;
+    font-family: 'Anton', sans-serif;
+    margin:0px;
+    color:#3649a9;
+
+}
+.intro .nice-title button{
+    background-color:#3649a9;
+    color: #fff;
+    padding: 8px 16px;
+    border:none;
+    border-radius: 2px;
+    float:right;
+    margin-right:56px;
+    cursor:pointer;
+    transition: background .5s cubic-bezier(0.16, 0.68, 1, 0.74);
+}
+.intro .nice-title button:hover {
+    background:#273892;
+}
+.intro .intro-img{
+    width: 50%;
+    height: 60vh;
+    position:relative;
+     
+}
+.intro .intro-img img{
+    width: 400px;
+    height:400px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius:50%;
+}
+/* start section  */
+section {
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0 0 0;
+}
+section h1 {
+    font-family: 'Roboto', sans-serif;
+    color:#3649a9;
+    font-size:35px;
+    font-weight:900;
+    text-transform: uppercase;
+    position:relative;
+    width:auto;
+    margin-top:0;
+
+}
+section h1 span{
+    display:block;
+    position:absolute;
+    top:0;
+    left:0; /* change in rtl to auto and add right : 0*/
+    width: 7%;/* change in rtl because font  */ 
+    height: 100%;
+    background: tomato;
+    z-index: -1;
+}
+section p{
+    font-family: 'Courier Prime', monospace;
+    color: #3649a9;
+    line-height:25px;
+
+}
+section p::first-letter{
+    text-transform:uppercase;
+    color:tomato;
+    font-size:35px;
+}
+/* start about section */
+#about .content{
+     width:70%;
+     padding:0 64px 0 0px; /* change in rtl */
+}
+#about .ab-image{
+     width:30%;
+     height: 60vh;
+}
+section img{
+    width:100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    header .menu .nav-bar{
+        position: fixed;
+        top:0;
+        left:0;
+        width:0%;
+        height: 100vh;
+        background: #fff;
+        padding: 80px 0;
+        overflow: hidden;
+        z-index: 1;
+    }
+    header .menu .nav-bar ul {
+        text-align: center;
+        height: 100vh;
+    }
+    header .menu .nav-bar ul li {
+        float: none;
+    }
+    header .menu .nav-bar ul li a, select {
+        padding: 16px 16px;
+        margin: 8px;
+    }
+    header .menu .nav-bar ul li:not(.call-num) a{
+        position: relative;
+        width: 160px;
+        
+    }
+    header .menu .navicon{
+        display:block;
+        position:fixed;
+
+    }
+    .intro .nice-title {
+        width: 100%;
+        height: 60vh;
+        float: none;
+    }
+    .intro .intro-img{
+        display:none;
+    }
+    /* start media to about section  */
+    #about .content{
+        width:100%;
+        padding: 0;
+    }
+    #about .ab-image{
+        width:100%;
+    }
+}
